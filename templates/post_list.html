@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>제목</th>
+                <th>작성자</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        hi there '{{ python_word }}'
+
+        {% for post in post_list %}
+            <tr>
+                <td>{{ post.title }}</td>
+                <td>{{ post.author }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+
+    </table>
+
+    {% for page in total_page %}
+        {% if current_page != page %}
+        <a href="?page={{ page }}" rel="nofollow">
+        {% else %}
+        <a>
+        {% endif %}
+            {% if current_pate == page %}
+            <span style="font-weight: bold"></span>
+            {% else %}
+            <span> {{ page }} </span>
+            {% endif %}
+        </a>
+    {% endfor %}
+
+</body>
+</html>

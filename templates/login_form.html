@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>뭘봐임마</title>
+    </head>
+
+    <body>
+        뭘봐임마
+        <form action="validate/" method="POST">
+            {% csrf_token %}
+
+            {{ login_form }}
+
+            <input type="submit" value="로그인">
+        </form>
+    </body>
+</html>
